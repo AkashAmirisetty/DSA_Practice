@@ -16,6 +16,5 @@ class Solution:
             prev=curr
             curr=curr.next
         prev.next=None
-        if curr.prev:
-            curr.prev=None
+        curr.prev=None
         return head
