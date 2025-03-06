@@ -1,5 +1,5 @@
 class Solution:
-    def minBitsFlip(self, start, goal):
+    # def minBitsFlip(self, start, goal):
 # ------------------MY APPROACH--------------------------------
 
     #     start=self.decitobinary(start)
@@ -26,5 +26,12 @@ class Solution:
     #     return res
 
 # --------------OPTIMAL(STRIVER's)----------------------------
-    
+    def minBitsFlip(self, start, goal):
+        ans=start^goal
+        count=0
+        for i in range(0,31):
+            if (ans&(1<<i)):
+                count+=1
+        return count
+
         
