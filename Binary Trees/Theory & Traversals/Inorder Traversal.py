@@ -1,0 +1,21 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.data = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def helper(self, root, arr):
+        if root is None:
+            return 
+        self.helper(root.left,arr)
+        arr.append(root.data)
+        self.helper(root.right,arr)
+
+    def inorder(self, root):
+        #your code goes here
+        arr=[]
+        self.helper(root,arr)
+        return arr
+        
